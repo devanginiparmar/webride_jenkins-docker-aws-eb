@@ -3,15 +3,15 @@
 # usage: ./deployme.sh staging sddffafaafaf
 # license: public domain
 
-application_name="WebRide"
-environment_name="Webride-env"
+application_name="Test"
+environment_name="Test-env"
 
-EB_BUCKET=webride-bucket
+EB_BUCKET=elastic-s3
 
 VERSION="v11"
 ZIP="code.$VERSION.zip"
 
-aws configure set default.region ap-south-1
+aws configure set default.region us-east-1
 
 # Zip up the Dockerrun file
 zip -r $ZIP Dockerrun.aws.json
